@@ -155,5 +155,16 @@ public class SplashScreen extends JWindow {
 
         g.setColor(TEXT_COLOR);
         g.drawString(version, textX, textY);
+
+	//Display name in middle-top of splash screen
+	String name = "Paul Siron";
+	
+	textX = getWidth()/2 - (name.length()*8);
+	textY = getHeight()/4;
+
+	g.setColor(Color.WHITE);
+	g.setFont(new Font("courier", Font.BOLD, 24));
+
+	g.drawString(name, textX, textY);
     }
 }

@@ -217,9 +217,14 @@ public class muCommander {
      * Prints the specified startup message.
      */
     private void printStartupMessage(String message) {
-        if(useSplash)
+        if(useSplash){
             splashScreen.setLoadingMessage(message);
-
+	    try{
+		Thread.sleep(1000);
+	    }catch (InterruptedException e){
+	
+	    }	
+	}
         LOGGER.trace(message);
     }
 
